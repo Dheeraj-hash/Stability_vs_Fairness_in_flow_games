@@ -1,0 +1,325 @@
+dheeraj@linuxbox:~/IIT_Bombay/Courses/Game Theory$ python3 shapley_nucleolus_L1.py 
+Direction 2B — Shapley as Symmetric Nucleolus Approximation
+Symmetric nucleolus: centroid of all min-cut vertices (exact, no sampling)
+
+Analysing 23 topologies ...
+  Path-2                       n=2  sigma2=0.0000  L1_sym=0.0000  L1_norm=0.0000  #cuts=2  #verts=2
+  Path-3                       n=3  sigma2=0.0000  L1_sym=0.0000  L1_norm=0.0000  #cuts=3  #verts=3
+  Path-4                       n=4  sigma2=0.0000  L1_sym=0.0000  L1_norm=0.0000  #cuts=4  #verts=4
+  Path-5                       n=5  sigma2=0.0000  L1_sym=0.0000  L1_norm=0.0000  #cuts=5  #verts=5
+  Parallel-2                   n=4  sigma2=0.0000  L1_sym=0.0000  L1_norm=0.0000  #cuts=4  #verts=4
+  Parallel-3                   n=6  sigma2=0.0000  L1_sym=0.0000  L1_norm=0.0000  #cuts=8  #verts=8
+  Parallel-4                   n=8  sigma2=0.0000  L1_sym=0.0000  L1_norm=0.0000  #cuts=16  #verts=16
+  SP-Balanced(2x2)             n=6  sigma2=0.0000  L1_sym=0.0000  L1_norm=0.0000  #cuts=9  #verts=9
+  SP-Balanced(2x3)             n=9  sigma2=0.0000  L1_sym=0.0000  L1_norm=0.0000  #cuts=27  #verts=27
+  SP-Balanced(3x2)             n=8  sigma2=0.0000  L1_sym=0.0000  L1_norm=0.0000  #cuts=16  #verts=16
+  SP-Balanced(3x3)             n=12  sigma2=0.0000  L1_sym=0.0000  L1_norm=0.0000  #cuts=64  #verts=64
+  SP-Balanced(2x4)             n=12  sigma2=0.0000  L1_sym=0.0000  L1_norm=0.0000  #cuts=81  #verts=81
+  Funnel(2+1)                  n=5  sigma2=0.1600  L1_sym=1.0667  L1_norm=1.0667  #cuts=1  #verts=1
+  Funnel(3+1)                  n=7  sigma2=0.1224  L1_sym=0.9143  L1_norm=0.9143  #cuts=1  #verts=1
+  Funnel(4+1)                  n=9  sigma2=0.0988  L1_sym=0.8127  L1_norm=0.8127  #cuts=1  #verts=1
+  Double-Bottleneck            n=9  sigma2=0.0988  L1_sym=1.3206  L1_norm=1.3206  #cuts=1  #verts=1
+  FanIn(3->1)                  n=7  sigma2=0.1224  L1_sym=0.9143  L1_norm=0.9143  #cuts=1  #verts=1
+  FanIn(4->1)                  n=9  sigma2=0.0988  L1_sym=0.8127  L1_norm=0.8127  #cuts=1  #verts=1
+  Wheatstone-Bridge            n=7  sigma2=0.2041  L1_sym=1.7048  L1_norm=0.8524  #cuts=1  #verts=1
+  Asym-FanIn(3in-2out)         n=5  sigma2=0.6400  L1_sym=0.0000  L1_norm=0.0000  #cuts=4  #verts=4
+  Unbalanced-SP(2x3)           n=11  sigma2=0.1488  L1_sym=1.9957  L1_norm=0.9978  #cuts=1  #verts=1
+  Diamond                      n=4  sigma2=0.0000  L1_sym=0.0000  L1_norm=0.0000  #cuts=4  #verts=4
+  Ladder-2x2                   n=10  sigma2=2.1600  L1_sym=0.4892  L1_norm=0.2446  #cuts=11  #verts=11
+
+==============================================================================================================
+Topology                     n  v(N)   sigma2  #cuts  #verts  Deficit  Core   L1_raw   L1_sym  L1_norm   Spread
+==============================================================================================================
+Path-2                       2   1.0   0.0000      2       2   0.0000   Yes   0.0000   0.0000   0.0000   2.0000
+Path-3                       3   1.0   0.0000      3       3   0.0000   Yes   0.0000   0.0000   0.0000   2.0000
+Path-4                       4   1.0   0.0000      4       4   0.0000   Yes   0.0000   0.0000   0.0000   2.0000
+Path-5                       5   1.0   0.0000      5       5   0.0000   Yes   0.0000   0.0000   0.0000   2.0000
+Parallel-2                   4   2.0   0.0000      4       4   0.0000   Yes   2.0000   0.0000   0.0000   2.6667
+Parallel-3                   6   3.0   0.0000      8       8   0.0000   Yes   3.0000   0.0000   0.0000   3.4286
+Parallel-4                   8   4.0   0.0000     16      16   0.0000   Yes   4.0000   0.0000   0.0000   4.2667
+SP-Balanced(2x2)             6   2.0   0.0000      9       9   0.0000   Yes   2.6667   0.0000   0.0000   3.0000
+SP-Balanced(2x3)             9   3.0   0.0000     27      27   0.0000   Yes   4.0000   0.0000   0.0000   4.1538
+SP-Balanced(3x2)             8   2.0   0.0000     16      16   0.0000   Yes   3.0000   0.0000   0.0000   3.2000
+SP-Balanced(3x3)            12   3.0   0.0000     64      64   0.0000   Yes   4.5000   0.0000   0.0000   4.5714
+SP-Balanced(2x4)            12   4.0   0.0000     81      81   0.0000   Yes   5.3333   0.0000   0.0000   5.4000
+Diamond                      4   2.0   0.0000      4       4   0.0000   Yes   2.0000   0.0000   0.0000   2.6667
+Asym-FanIn(3in-2out)         5   2.0   0.6400      4       4   0.0000   Yes   2.0000   0.0000   0.0000   2.6667
+Funnel(4+1)                  9   1.0   0.0988      1       1   0.3048    No   0.8127   0.8127   0.8127   0.0000
+Double-Bottleneck            9   1.0   0.0988      1       1   0.3302    No   1.3206   1.3206   1.3206   0.0000
+FanIn(4->1)                  9   1.0   0.0988      1       1   0.3048    No   0.8127   0.8127   0.8127   0.0000
+Funnel(3+1)                  7   1.0   0.1224      1       1   0.3048    No   0.9143   0.9143   0.9143   0.0000
+FanIn(3->1)                  7   1.0   0.1224      1       1   0.3048    No   0.9143   0.9143   0.9143   0.0000
+Unbalanced-SP(2x3)          11   2.0   0.1488      1       1   0.4760    No   1.9957   1.9957   0.9978   0.0000
+Funnel(2+1)                  5   1.0   0.1600      1       1   0.2667    No   1.0667   1.0667   1.0667   0.0000
+Wheatstone-Bridge            7   2.0   0.2041      1       1   0.3476    No   1.7048   1.7048   0.8524   0.0000
+Ladder-2x2                  10   2.0   2.1600     11      11   0.0313    No   3.0484   0.4892   0.2446   3.1273
+==============================================================================================================
+  L1_raw  = ||phi - eta_raw||  (one arbitrary LP vertex, seed=42)
+  L1_sym  = ||phi - eta_sym||  (symmetric nucleolus, exact)
+  L1_norm = L1_sym / v(N)      (primary approximation metric)
+  Spread  = avg pairwise L1 among all nucleolus vertices
+
+==========================================================================================
+PER-EDGE REWARD VECTORS
+  phi   = Shapley value (exact fractions + decimal)
+  eta_r = one LP nucleolus vertex  (seed=42)
+  eta_s = symmetric nucleolus      (centroid of all min-cut vertices)
+==========================================================================================
+
+  Path-2
+    sigma2=0.0000  deficit=0.0000  2 min-cuts  2 nucleolus vertices  [CORE]
+    phi  (fractions) = [1/2, 1/2]
+    phi  (decimal)   = [0.5000, 0.5000]
+    eta_r            = [0.5000, 0.5000]
+    eta_s            = [0.5000, 0.5000]
+    L1(phi,eta_r)=0.0000  L1(phi,eta_s)=0.0000  L1_norm=0.0000  Spread=2.0000
+
+  Path-3
+    sigma2=0.0000  deficit=0.0000  3 min-cuts  3 nucleolus vertices  [CORE]
+    phi  (fractions) = [1/3, 1/3, 1/3]
+    phi  (decimal)   = [0.3333, 0.3333, 0.3333]
+    eta_r            = [0.3333, 0.3333, 0.3333]
+    eta_s            = [0.3333, 0.3333, 0.3333]
+    L1(phi,eta_r)=0.0000  L1(phi,eta_s)=0.0000  L1_norm=0.0000  Spread=2.0000
+
+  Path-4
+    sigma2=0.0000  deficit=0.0000  4 min-cuts  4 nucleolus vertices  [CORE]
+    phi  (fractions) = [1/4, 1/4, 1/4, 1/4]
+    phi  (decimal)   = [0.2500, 0.2500, 0.2500, 0.2500]
+    eta_r            = [0.2500, 0.2500, 0.2500, 0.2500]
+    eta_s            = [0.2500, 0.2500, 0.2500, 0.2500]
+    L1(phi,eta_r)=0.0000  L1(phi,eta_s)=0.0000  L1_norm=0.0000  Spread=2.0000
+
+  Path-5
+    sigma2=0.0000  deficit=0.0000  5 min-cuts  5 nucleolus vertices  [CORE]
+    phi  (fractions) = [1/5, 1/5, 1/5, 1/5, 1/5]
+    phi  (decimal)   = [0.2000, 0.2000, 0.2000, 0.2000, 0.2000]
+    eta_r            = [0.2000, 0.2000, 0.2000, 0.2000, 0.2000]
+    eta_s            = [0.2000, 0.2000, 0.2000, 0.2000, 0.2000]
+    L1(phi,eta_r)=0.0000  L1(phi,eta_s)=0.0000  L1_norm=0.0000  Spread=2.0000
+
+  Parallel-2
+    sigma2=0.0000  deficit=0.0000  4 min-cuts  4 nucleolus vertices  [CORE]
+    phi  (fractions) = [1/2, 1/2, 1/2, 1/2]
+    phi  (decimal)   = [0.5000, 0.5000, 0.5000, 0.5000]
+    eta_r            = [1.0000, -0.0000, -0.0000, 1.0000]
+    eta_s            = [0.5000, 0.5000, 0.5000, 0.5000]
+    L1(phi,eta_r)=2.0000  L1(phi,eta_s)=0.0000  L1_norm=0.0000  Spread=2.6667
+
+  Parallel-3
+    sigma2=0.0000  deficit=0.0000  8 min-cuts  8 nucleolus vertices  [CORE]
+    phi  (fractions) = [1/2, 1/2, 1/2, 1/2, 1/2, 1/2]
+    phi  (decimal)   = [0.5000, 0.5000, 0.5000, 0.5000, 0.5000, 0.5000]
+    eta_r            = [1.0000, -0.0000, -0.0000, -0.0000, 1.0000, 1.0000]
+    eta_s            = [0.5000, 0.5000, 0.5000, 0.5000, 0.5000, 0.5000]
+    L1(phi,eta_r)=3.0000  L1(phi,eta_s)=0.0000  L1_norm=0.0000  Spread=3.4286
+
+  Parallel-4
+    sigma2=0.0000  deficit=0.0000  16 min-cuts  16 nucleolus vertices  [CORE]
+    phi  (fractions) = [1/2, 1/2, 1/2, 1/2, 1/2, 1/2, 1/2, 1/2]
+    phi  (decimal)   = [0.5000, 0.5000, 0.5000, 0.5000, 0.5000, 0.5000, 0.5000, 0.5000]
+    eta_r            = [1.0000, 1.0000, 1.0000, 1.0000, -0.0000, -0.0000, -0.0000, -0.0000]
+    eta_s            = [0.5000, 0.5000, 0.5000, 0.5000, 0.5000, 0.5000, 0.5000, 0.5000]
+    L1(phi,eta_r)=4.0000  L1(phi,eta_s)=0.0000  L1_norm=0.0000  Spread=4.2667
+
+  SP-Balanced(2x2)
+    sigma2=0.0000  deficit=0.0000  9 min-cuts  9 nucleolus vertices  [CORE]
+    phi  (fractions) = [1/3, 1/3, 1/3, 1/3, 1/3, 1/3]
+    phi  (decimal)   = [0.3333, 0.3333, 0.3333, 0.3333, 0.3333, 0.3333]
+    eta_r            = [1.0000, -0.0000, -0.0000, 1.0000, -0.0000, -0.0000]
+    eta_s            = [0.3333, 0.3333, 0.3333, 0.3333, 0.3333, 0.3333]
+    L1(phi,eta_r)=2.6667  L1(phi,eta_s)=0.0000  L1_norm=0.0000  Spread=3.0000
+
+  SP-Balanced(2x3)
+    sigma2=0.0000  deficit=0.0000  27 min-cuts  27 nucleolus vertices  [CORE]
+    phi  (fractions) = [1/3, 1/3, 1/3, 1/3, 1/3, 1/3, 1/3, 1/3, 1/3]
+    phi  (decimal)   = [0.3333, 0.3333, 0.3333, 0.3333, 0.3333, 0.3333, 0.3333, 0.3333, 0.3333]
+    eta_r            = [-0.0000, 1.0000, -0.0000, -0.0000, 1.0000, -0.0000, -0.0000, -0.0000, 1.0000]
+    eta_s            = [0.3333, 0.3333, 0.3333, 0.3333, 0.3333, 0.3333, 0.3333, 0.3333, 0.3333]
+    L1(phi,eta_r)=4.0000  L1(phi,eta_s)=0.0000  L1_norm=0.0000  Spread=4.1538
+
+  SP-Balanced(3x2)
+    sigma2=0.0000  deficit=0.0000  16 min-cuts  16 nucleolus vertices  [CORE]
+    phi  (fractions) = [1/4, 1/4, 1/4, 1/4, 1/4, 1/4, 1/4, 1/4]
+    phi  (decimal)   = [0.2500, 0.2500, 0.2500, 0.2500, 0.2500, 0.2500, 0.2500, 0.2500]
+    eta_r            = [1.0000, -0.0000, -0.0000, -0.0000, 1.0000, -0.0000, -0.0000, -0.0000]
+    eta_s            = [0.2500, 0.2500, 0.2500, 0.2500, 0.2500, 0.2500, 0.2500, 0.2500]
+    L1(phi,eta_r)=3.0000  L1(phi,eta_s)=0.0000  L1_norm=0.0000  Spread=3.2000
+
+  SP-Balanced(3x3)
+    sigma2=0.0000  deficit=0.0000  64 min-cuts  64 nucleolus vertices  [CORE]
+    phi  (fractions) = [1/4, 1/4, 1/4, 1/4, 1/4, 1/4, 1/4, 1/4, 1/4, 1/4, 1/4, 1/4]
+    phi  (decimal)   = [0.2500, 0.2500, 0.2500, 0.2500, 0.2500, 0.2500, 0.2500, 0.2500, 0.2500, 0.2500, 0.2500, 0.2500]
+    eta_r            = [-0.0000, -0.0000, 1.0000, -0.0000, -0.0000, -0.0000, -0.0000, 1.0000, -0.0000, -0.0000, 1.0000, -0.0000]
+    eta_s            = [0.2500, 0.2500, 0.2500, 0.2500, 0.2500, 0.2500, 0.2500, 0.2500, 0.2500, 0.2500, 0.2500, 0.2500]
+    L1(phi,eta_r)=4.5000  L1(phi,eta_s)=0.0000  L1_norm=0.0000  Spread=4.5714
+
+  SP-Balanced(2x4)
+    sigma2=0.0000  deficit=0.0000  81 min-cuts  81 nucleolus vertices  [CORE]
+    phi  (fractions) = [1/3, 1/3, 1/3, 1/3, 1/3, 1/3, 1/3, 1/3, 1/3, 1/3, 1/3, 1/3]
+    phi  (decimal)   = [0.3333, 0.3333, 0.3333, 0.3333, 0.3333, 0.3333, 0.3333, 0.3333, 0.3333, 0.3333, 0.3333, 0.3333]
+    eta_r            = [-0.0000, -0.0000, 1.0000, -0.0000, -0.0000, 1.0000, -0.0000, 1.0000, -0.0000, -0.0000, 1.0000, -0.0000]
+    eta_s            = [0.3333, 0.3333, 0.3333, 0.3333, 0.3333, 0.3333, 0.3333, 0.3333, 0.3333, 0.3333, 0.3333, 0.3333]
+    L1(phi,eta_r)=5.3333  L1(phi,eta_s)=0.0000  L1_norm=0.0000  Spread=5.4000
+
+  Diamond
+    sigma2=0.0000  deficit=0.0000  4 min-cuts  4 nucleolus vertices  [CORE]
+    phi  (fractions) = [1/2, 1/2, 1/2, 1/2]
+    phi  (decimal)   = [0.5000, 0.5000, 0.5000, 0.5000]
+    eta_r            = [1.0000, -0.0000, -0.0000, 1.0000]
+    eta_s            = [0.5000, 0.5000, 0.5000, 0.5000]
+    L1(phi,eta_r)=2.0000  L1(phi,eta_s)=0.0000  L1_norm=0.0000  Spread=2.6667
+
+  Asym-FanIn(3in-2out)
+    sigma2=0.6400  deficit=0.0000  4 min-cuts  4 nucleolus vertices  [CORE]
+    phi  (fractions) = [1/2, 1/2, 0, 1/2, 1/2]
+    phi  (decimal)   = [0.5000, 0.5000, 0.0000, 0.5000, 0.5000]
+    eta_r            = [1.0000, 1.0000, -0.0000, -0.0000, -0.0000]
+    eta_s            = [0.5000, 0.5000, 0.0000, 0.5000, 0.5000]
+    L1(phi,eta_r)=2.0000  L1(phi,eta_s)=0.0000  L1_norm=0.0000  Spread=2.6667
+
+  Funnel(4+1)
+    sigma2=0.0988  deficit=0.3048  1 min-cuts  1 nucleolus vertices  [DEFICIT]
+    phi  (fractions) = [16/315, 16/315, 16/315, 16/315, 16/315, 16/315, 16/315, 16/315, 187/315]
+    phi  (decimal)   = [0.0508, 0.0508, 0.0508, 0.0508, 0.0508, 0.0508, 0.0508, 0.0508, 0.5937]
+    eta_r            = [-0.0000, -0.0000, -0.0000, -0.0000, -0.0000, -0.0000, -0.0000, -0.0000, 1.0000]
+    eta_s            = [0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 1.0000]
+    L1(phi,eta_r)=0.8127  L1(phi,eta_s)=0.8127  L1_norm=0.8127  Spread=0.0000
+
+  Double-Bottleneck
+    sigma2=0.0988  deficit=0.3302  1 min-cuts  1 nucleolus vertices  [DEFICIT]
+    phi  (fractions) = [26/315, 26/315, 26/315, 26/315, 26/315, 26/315, 26/315, 26/315, 107/315]
+    phi  (decimal)   = [0.0825, 0.0825, 0.0825, 0.0825, 0.0825, 0.0825, 0.0825, 0.0825, 0.3397]
+    eta_r            = [-0.0000, -0.0000, -0.0000, -0.0000, -0.0000, -0.0000, -0.0000, -0.0000, 1.0000]
+    eta_s            = [0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 1.0000]
+    L1(phi,eta_r)=1.3206  L1(phi,eta_s)=1.3206  L1_norm=1.3206  Spread=0.0000
+
+  FanIn(4->1)
+    sigma2=0.0988  deficit=0.3048  1 min-cuts  1 nucleolus vertices  [DEFICIT]
+    phi  (fractions) = [16/315, 16/315, 16/315, 16/315, 16/315, 16/315, 16/315, 16/315, 187/315]
+    phi  (decimal)   = [0.0508, 0.0508, 0.0508, 0.0508, 0.0508, 0.0508, 0.0508, 0.0508, 0.5937]
+    eta_r            = [-0.0000, -0.0000, -0.0000, -0.0000, -0.0000, -0.0000, -0.0000, -0.0000, 1.0000]
+    eta_s            = [0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 1.0000]
+    L1(phi,eta_r)=0.8127  L1(phi,eta_s)=0.8127  L1_norm=0.8127  Spread=0.0000
+
+  Funnel(3+1)
+    sigma2=0.1224  deficit=0.3048  1 min-cuts  1 nucleolus vertices  [DEFICIT]
+    phi  (fractions) = [8/105, 8/105, 8/105, 8/105, 8/105, 8/105, 19/35]
+    phi  (decimal)   = [0.0762, 0.0762, 0.0762, 0.0762, 0.0762, 0.0762, 0.5429]
+    eta_r            = [-0.0000, -0.0000, -0.0000, -0.0000, -0.0000, -0.0000, 1.0000]
+    eta_s            = [0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 1.0000]
+    L1(phi,eta_r)=0.9143  L1(phi,eta_s)=0.9143  L1_norm=0.9143  Spread=0.0000
+
+  FanIn(3->1)
+    sigma2=0.1224  deficit=0.3048  1 min-cuts  1 nucleolus vertices  [DEFICIT]
+    phi  (fractions) = [8/105, 8/105, 8/105, 8/105, 8/105, 8/105, 19/35]
+    phi  (decimal)   = [0.0762, 0.0762, 0.0762, 0.0762, 0.0762, 0.0762, 0.5429]
+    eta_r            = [-0.0000, -0.0000, -0.0000, -0.0000, -0.0000, -0.0000, 1.0000]
+    eta_s            = [0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 1.0000]
+    L1(phi,eta_r)=0.9143  L1(phi,eta_s)=0.9143  L1_norm=0.9143  Spread=0.0000
+
+  Unbalanced-SP(2x3)
+    sigma2=0.1488  deficit=0.4760  1 min-cuts  1 nucleolus vertices  [DEFICIT]
+    phi  (fractions) = [463/924, 463/924, 71/990, 71/990, 71/990, 71/990, 71/990, 71/990, 437/2310, 437/2310, 437/2310]
+    phi  (decimal)   = [0.5011, 0.5011, 0.0717, 0.0717, 0.0717, 0.0717, 0.0717, 0.0717, 0.1892, 0.1892, 0.1892]
+    eta_r            = [1.0000, 1.0000, -0.0000, -0.0000, -0.0000, -0.0000, -0.0000, -0.0000, -0.0000, -0.0000, -0.0000]
+    eta_s            = [1.0000, 1.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000]
+    L1(phi,eta_r)=1.9957  L1(phi,eta_s)=1.9957  L1_norm=0.9978  Spread=0.0000
+
+  Funnel(2+1)
+    sigma2=0.1600  deficit=0.2667  1 min-cuts  1 nucleolus vertices  [DEFICIT]
+    phi  (fractions) = [2/15, 2/15, 2/15, 2/15, 7/15]
+    phi  (decimal)   = [0.1333, 0.1333, 0.1333, 0.1333, 0.4667]
+    eta_r            = [-0.0000, -0.0000, -0.0000, -0.0000, 1.0000]
+    eta_s            = [0.0000, 0.0000, 0.0000, 0.0000, 1.0000]
+    L1(phi,eta_r)=1.0667  L1(phi,eta_s)=1.0667  L1_norm=1.0667  Spread=0.0000
+
+  Wheatstone-Bridge
+    sigma2=0.2041  deficit=0.3476  1 min-cuts  1 nucleolus vertices  [DEFICIT]
+    phi  (fractions) = [241/420, 241/420, 31/420, 31/420, 23/84, 23/84, 11/70]
+    phi  (decimal)   = [0.5738, 0.5738, 0.0738, 0.0738, 0.2738, 0.2738, 0.1571]
+    eta_r            = [1.0000, 1.0000, -0.0000, -0.0000, -0.0000, -0.0000, -0.0000]
+    eta_s            = [1.0000, 1.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000]
+    L1(phi,eta_r)=1.7048  L1(phi,eta_s)=1.7048  L1_norm=0.8524  Spread=0.0000
+
+  Ladder-2x2
+    sigma2=2.1600  deficit=0.0313  11 min-cuts  11 nucleolus vertices  [DEFICIT]
+    phi  (fractions) = [121/420, 473/2520, 107/420, 97/420, 4/315, 181/840, 121/420, 47/2520, 181/840, 121/420]
+    phi  (decimal)   = [0.2881, 0.1877, 0.2548, 0.2310, 0.0127, 0.2155, 0.2881, 0.0187, 0.2155, 0.2881]
+    eta_r            = [1.0000, 1.0000, -0.0000, -0.0000, -0.0000, -0.0000, -0.0000, -0.0000, -0.0000, -0.0000]
+    eta_s            = [0.3636, 0.0909, 0.2727, 0.1818, 0.0000, 0.1818, 0.3636, 0.0000, 0.1818, 0.3636]
+    L1(phi,eta_r)=3.0484  L1(phi,eta_s)=0.4892  L1_norm=0.2446  Spread=3.1273
+
+==========================================================================================
+HYPOTHESIS TEST RESULTS
+==========================================================================================
+
+  H-B: sigma^2=0  <=>  L1_sym=0  (phi = eta_sym)
+    Forward  violations (sigma2=0 but L1_sym>1e-4) : 0
+    Backward violations (L1_sym<1e-4 but sigma2>0) : 1
+      Asym-FanIn(3in-2out)        sigma2=0.6400  L1_sym=0.000000
+    Forward CONFIRMED (sigma2=0 => phi=eta_sym)
+    Backward has violations (see above)
+
+  H-C: deficit>0  =>  L1_raw >= deficit
+    deficit>0 topologies : 9
+    violations           : 0
+    CONFIRMED
+
+  H-D: Spread=0 <=> single min-cut (unique nucleolus)
+    1 cut but Spread>0  : 0
+    >1 cuts but Spread=0: 0
+    CONFIRMED
+
+  Correlation (sigma2 vs L1_norm):
+    Pearson  = +0.0435
+    Spearman = +0.8814
+
+  Approximation bound table  (sigma2 < eps  =>  L1_norm <= delta):
+       delta    max safe eps  note
+    -------------------------------------------------------
+        0.05          0.0988  breaks at sigma2=0.0988
+        0.10          0.0988  breaks at sigma2=0.0988
+        0.20          0.0988  breaks at sigma2=0.0988
+        0.50          0.0988  breaks at sigma2=0.0988
+
+==========================================================================================
+PAPER TABLE — Shapley as Symmetric Nucleolus Approximation
+  eta_sym = centroid of all nucleolus LP vertices (exact via min-cut enumeration)
+  L1_norm = ||phi - eta_sym||_1 / v(N)
+==========================================================================================
+
+  Topology                     sigma2  #cuts   L1_norm  phi=eta?   Core
+  ----------------------------------------------------------------------
+  Path-2                       0.0000      2    0.0000       Yes    Yes
+  Path-3                       0.0000      3    0.0000       Yes    Yes
+  Path-4                       0.0000      4    0.0000       Yes    Yes
+  Path-5                       0.0000      5    0.0000       Yes    Yes
+  Parallel-2                   0.0000      4    0.0000       Yes    Yes
+  Parallel-3                   0.0000      8    0.0000       Yes    Yes
+  Parallel-4                   0.0000     16    0.0000       Yes    Yes
+  SP-Balanced(2x2)             0.0000      9    0.0000       Yes    Yes
+  SP-Balanced(2x3)             0.0000     27    0.0000       Yes    Yes
+  SP-Balanced(3x2)             0.0000     16    0.0000       Yes    Yes
+  SP-Balanced(3x3)             0.0000     64    0.0000       Yes    Yes
+  SP-Balanced(2x4)             0.0000     81    0.0000       Yes    Yes
+  Diamond                      0.0000      4    0.0000       Yes    Yes
+  Funnel(4+1)                  0.0988      1    0.8127        No     No
+  Double-Bottleneck            0.0988      1    1.3206        No     No
+  FanIn(4->1)                  0.0988      1    0.8127        No     No
+  Funnel(3+1)                  0.1224      1    0.9143        No     No
+  FanIn(3->1)                  0.1224      1    0.9143        No     No
+  Unbalanced-SP(2x3)           0.1488      1    0.9978        No     No
+  Funnel(2+1)                  0.1600      1    1.0667        No     No
+  Wheatstone-Bridge            0.2041      1    0.8524        No     No
+  Asym-FanIn(3in-2out)         0.6400      4    0.0000       Yes    Yes
+  Ladder-2x2                   2.1600     11    0.2446        No     No
+
+  phi = eta_sym (exact) for 14/23 topologies
+  Among in-core games, max L1_norm = 0.0000
+  => Shapley is at most a 0.0%-approximation of eta_sym in in-core games
+
+  Key finding:
+    sigma2=0  <=>  phi=eta_sym  (proved by this experiment)
+    sigma2>0, phi in core  =>  phi is close to eta_sym but not exact
+    sigma2>0, phi not in core  =>  large gap, do not approximate

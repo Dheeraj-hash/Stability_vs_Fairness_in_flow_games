@@ -1,0 +1,162 @@
+dheeraj@linuxbox:~/IIT_Bombay/Courses/Game Theory$ python3 sigma2-deficit.py 
+Analyzing topologies...
+  Processing: Path-2  (n=2 edges)  -> σ²=0.0000  deficit=0.0000
+  Processing: Path-3  (n=3 edges)  -> σ²=0.0000  deficit=0.0000
+  Processing: Path-4  (n=4 edges)  -> σ²=0.0000  deficit=0.0000
+  Processing: Path-5  (n=5 edges)  -> σ²=0.0000  deficit=0.0000
+  Processing: Parallel-2  (n=4 edges)  -> σ²=0.0000  deficit=0.0000
+  Processing: Parallel-3  (n=6 edges)  -> σ²=0.0000  deficit=0.0000
+  Processing: Parallel-4  (n=8 edges)  -> σ²=0.0000  deficit=0.0000
+  Processing: SP-Balanced(2x2)  (n=6 edges)  -> σ²=0.0000  deficit=0.0000
+  Processing: SP-Balanced(2x3)  (n=9 edges)  -> σ²=0.0000  deficit=0.0000
+  Processing: SP-Balanced(3x2)  (n=8 edges)  -> σ²=0.0000  deficit=0.0000
+  Processing: SP-Balanced(3x3)  (n=12 edges)  -> σ²=0.0000  deficit=0.0000
+  Processing: SP-Balanced(2x4)  (n=12 edges)  -> σ²=0.0000  deficit=0.0000
+  Processing: Funnel(2+1)  (n=5 edges)  -> σ²=0.1600  deficit=0.2667
+  Processing: Funnel(3+1)  (n=7 edges)  -> σ²=0.1224  deficit=0.3048
+  Processing: Funnel(4+1)  (n=9 edges)  -> σ²=0.0988  deficit=0.3048
+  Processing: Double-Bottleneck  (n=9 edges)  -> σ²=0.0988  deficit=0.3302
+  Processing: FanIn(3->1)  (n=7 edges)  -> σ²=0.1224  deficit=0.3048
+  Processing: FanIn(4->1)  (n=9 edges)  -> σ²=0.0988  deficit=0.3048
+  Processing: Wheatstone-Bridge  (n=7 edges)  -> σ²=0.2041  deficit=0.3476
+  Processing: Asym-FanIn(3in-2out)  (n=5 edges)  -> σ²=0.6400  deficit=0.0000
+  Processing: Unbalanced-SP(2x3)  (n=11 edges)  -> σ²=0.1488  deficit=0.4760
+  Processing: Diamond  (n=4 edges)  -> σ²=0.0000  deficit=0.0000
+  Processing: Ladder-2x2  (n=10 edges)  -> σ²=2.1600  deficit=0.0313
+
+========================================================================================================================
+Topology                       n MaxFlow Convex InCore n_cuts  σ²(edge-freq)    Deficit
+========================================================================================================================
+Path-2                         2       1    Yes    Yes      2         0.0000     0.0000
+Path-3                         3       1    Yes    Yes      3         0.0000     0.0000
+Path-4                         4       1    Yes    Yes      4         0.0000     0.0000
+Path-5                         5       1    Yes    Yes      5         0.0000     0.0000
+Parallel-2                     4       2    Yes    Yes      4         0.0000     0.0000
+Parallel-3                     6       3    Yes    Yes      8         0.0000     0.0000
+Parallel-4                     8       4    Yes    Yes     16         0.0000     0.0000
+SP-Balanced(2x2)               6       2    Yes    Yes      9         0.0000     0.0000
+SP-Balanced(2x3)               9       3    Yes    Yes     27         0.0000     0.0000
+SP-Balanced(3x2)               8       2    Yes    Yes     16         0.0000     0.0000
+SP-Balanced(3x3)              12       3    Yes    Yes     64         0.0000     0.0000
+SP-Balanced(2x4)              12       4    Yes    Yes     81         0.0000     0.0000
+Diamond                        4       2    Yes    Yes      4         0.0000     0.0000
+Funnel(4+1)                    9       1     No     No      1         0.0988     0.3048
+Double-Bottleneck              9       1     No     No      1         0.0988     0.3302
+FanIn(4->1)                    9       1     No     No      1         0.0988     0.3048
+Funnel(3+1)                    7       1     No     No      1         0.1224     0.3048
+FanIn(3->1)                    7       1     No     No      1         0.1224     0.3048
+Unbalanced-SP(2x3)            11       2     No     No      1         0.1488     0.4760
+Funnel(2+1)                    5       1     No     No      1         0.1600     0.2667
+Wheatstone-Bridge              7       2     No     No      1         0.2041     0.3476
+Asym-FanIn(3in-2out)           5       2    Yes    Yes      4         0.6400     0.0000
+Ladder-2x2                    10       2     No     No     11         2.1600     0.0313
+========================================================================================================================
+
+--- Shapley values (exact fractions) ---
+  Path-2                        φ = [1/2, 1/2]
+  Path-3                        φ = [1/3, 1/3, 1/3]
+  Path-4                        φ = [1/4, 1/4, 1/4, 1/4]
+  Path-5                        φ = [1/5, 1/5, 1/5, 1/5, 1/5]
+  Parallel-2                    φ = [1/2, 1/2, 1/2, 1/2]
+  Parallel-3                    φ = [1/2, 1/2, 1/2, 1/2, 1/2, 1/2]
+  Parallel-4                    φ = [1/2, 1/2, 1/2, 1/2, 1/2, 1/2, 1/2, 1/2]
+  SP-Balanced(2x2)              φ = [1/3, 1/3, 1/3, 1/3, 1/3, 1/3]
+  SP-Balanced(2x3)              φ = [1/3, 1/3, 1/3, 1/3, 1/3, 1/3, 1/3, 1/3, 1/3]
+  SP-Balanced(3x2)              φ = [1/4, 1/4, 1/4, 1/4, 1/4, 1/4, 1/4, 1/4]
+  SP-Balanced(3x3)              φ = [1/4, 1/4, 1/4, 1/4, 1/4, 1/4, 1/4, 1/4, 1/4, 1/4, 1/4, 1/4]
+  SP-Balanced(2x4)              φ = [1/3, 1/3, 1/3, 1/3, 1/3, 1/3, 1/3, 1/3, 1/3, 1/3, 1/3, 1/3]
+  Diamond                       φ = [1/2, 1/2, 1/2, 1/2]
+  Funnel(4+1)                   φ = [16/315, 16/315, 16/315, 16/315, 16/315, 16/315, 16/315, 16/315, 187/315]
+  Double-Bottleneck             φ = [26/315, 26/315, 26/315, 26/315, 26/315, 26/315, 26/315, 26/315, 107/315]
+  FanIn(4->1)                   φ = [16/315, 16/315, 16/315, 16/315, 16/315, 16/315, 16/315, 16/315, 187/315]
+  Funnel(3+1)                   φ = [8/105, 8/105, 8/105, 8/105, 8/105, 8/105, 19/35]
+  FanIn(3->1)                   φ = [8/105, 8/105, 8/105, 8/105, 8/105, 8/105, 19/35]
+  Unbalanced-SP(2x3)            φ = [463/924, 463/924, 71/990, 71/990, 71/990, 71/990, 71/990, 71/990, 437/2310, 437/2310, 437/2310]
+  Funnel(2+1)                   φ = [2/15, 2/15, 2/15, 2/15, 7/15]
+  Wheatstone-Bridge             φ = [241/420, 241/420, 31/420, 31/420, 23/84, 23/84, 11/70]
+  Asym-FanIn(3in-2out)          φ = [1/2, 1/2, 0, 1/2, 1/2]
+  Ladder-2x2                    φ = [121/420, 473/2520, 107/420, 97/420, 4/315, 181/840, 121/420, 47/2520, 181/840, 121/420]
+
+--- Per-edge cut frequencies (how many min-cuts each edge crosses) ---
+  Path-2                        freqs=[1, 1]  σ²=0.0000
+  Path-3                        freqs=[1, 1, 1]  σ²=0.0000
+  Path-4                        freqs=[1, 1, 1, 1]  σ²=0.0000
+  Path-5                        freqs=[1, 1, 1, 1, 1]  σ²=0.0000
+  Parallel-2                    freqs=[2, 2, 2, 2]  σ²=0.0000
+  Parallel-3                    freqs=[4, 4, 4, 4, 4, 4]  σ²=0.0000
+  Parallel-4                    freqs=[8, 8, 8, 8, 8, 8, 8, 8]  σ²=0.0000
+  SP-Balanced(2x2)              freqs=[3, 3, 3, 3, 3, 3]  σ²=0.0000
+  SP-Balanced(2x3)              freqs=[9, 9, 9, 9, 9, 9, 9, 9, 9]  σ²=0.0000
+  SP-Balanced(3x2)              freqs=[4, 4, 4, 4, 4, 4, 4, 4]  σ²=0.0000
+  SP-Balanced(3x3)              freqs=[16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16]  σ²=0.0000
+  SP-Balanced(2x4)              freqs=[27, 27, 27, 27, 27, 27, 27, 27, 27, 27, 27, 27]  σ²=0.0000
+  Diamond                       freqs=[2, 2, 2, 2]  σ²=0.0000
+  Funnel(4+1)                   freqs=[0, 0, 0, 0, 0, 0, 0, 0, 1]  σ²=0.0988
+  Double-Bottleneck             freqs=[0, 0, 0, 0, 0, 0, 0, 0, 1]  σ²=0.0988
+  FanIn(4->1)                   freqs=[0, 0, 0, 0, 0, 0, 0, 0, 1]  σ²=0.0988
+  Funnel(3+1)                   freqs=[0, 0, 0, 0, 0, 0, 1]  σ²=0.1224
+  FanIn(3->1)                   freqs=[0, 0, 0, 0, 0, 0, 1]  σ²=0.1224
+  Unbalanced-SP(2x3)            freqs=[1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0]  σ²=0.1488
+  Funnel(2+1)                   freqs=[0, 0, 0, 0, 1]  σ²=0.1600
+  Wheatstone-Bridge             freqs=[1, 1, 0, 0, 0, 0, 0]  σ²=0.2041
+  Asym-FanIn(3in-2out)          freqs=[2, 2, 0, 2, 2]  σ²=0.6400
+  Ladder-2x2                    freqs=[4, 1, 3, 2, 0, 2, 4, 0, 2, 4]  σ²=2.1600
+
+--- Monotonicity conjecture: deficit non-decreasing in σ²(edge-freq) ---
+  Pairs checked (σ²_i < σ²_j): 171
+  Monotonicity violations:      25
+  VIOLATIONS FOUND:
+    Funnel(2+1) (σ²=0.1600, deficit=0.2667) > Asym-FanIn(3in-2out) (σ²=0.6400, deficit=0.0000)
+    Funnel(2+1) (σ²=0.1600, deficit=0.2667) > Ladder-2x2 (σ²=2.1600, deficit=0.0313)
+    Funnel(3+1) (σ²=0.1224, deficit=0.3048) > Funnel(2+1) (σ²=0.1600, deficit=0.2667)
+    Funnel(3+1) (σ²=0.1224, deficit=0.3048) > Asym-FanIn(3in-2out) (σ²=0.6400, deficit=0.0000)
+    Funnel(3+1) (σ²=0.1224, deficit=0.3048) > Ladder-2x2 (σ²=2.1600, deficit=0.0313)
+    Funnel(4+1) (σ²=0.0988, deficit=0.3048) > Funnel(2+1) (σ²=0.1600, deficit=0.2667)
+    Funnel(4+1) (σ²=0.0988, deficit=0.3048) > Asym-FanIn(3in-2out) (σ²=0.6400, deficit=0.0000)
+    Funnel(4+1) (σ²=0.0988, deficit=0.3048) > Ladder-2x2 (σ²=2.1600, deficit=0.0313)
+    Double-Bottleneck (σ²=0.0988, deficit=0.3302) > Funnel(2+1) (σ²=0.1600, deficit=0.2667)
+    Double-Bottleneck (σ²=0.0988, deficit=0.3302) > Funnel(3+1) (σ²=0.1224, deficit=0.3048)
+    Double-Bottleneck (σ²=0.0988, deficit=0.3302) > FanIn(3->1) (σ²=0.1224, deficit=0.3048)
+    Double-Bottleneck (σ²=0.0988, deficit=0.3302) > Asym-FanIn(3in-2out) (σ²=0.6400, deficit=0.0000)
+    Double-Bottleneck (σ²=0.0988, deficit=0.3302) > Ladder-2x2 (σ²=2.1600, deficit=0.0313)
+    FanIn(3->1) (σ²=0.1224, deficit=0.3048) > Funnel(2+1) (σ²=0.1600, deficit=0.2667)
+    FanIn(3->1) (σ²=0.1224, deficit=0.3048) > Asym-FanIn(3in-2out) (σ²=0.6400, deficit=0.0000)
+    FanIn(3->1) (σ²=0.1224, deficit=0.3048) > Ladder-2x2 (σ²=2.1600, deficit=0.0313)
+    FanIn(4->1) (σ²=0.0988, deficit=0.3048) > Funnel(2+1) (σ²=0.1600, deficit=0.2667)
+    FanIn(4->1) (σ²=0.0988, deficit=0.3048) > Asym-FanIn(3in-2out) (σ²=0.6400, deficit=0.0000)
+    FanIn(4->1) (σ²=0.0988, deficit=0.3048) > Ladder-2x2 (σ²=2.1600, deficit=0.0313)
+    Wheatstone-Bridge (σ²=0.2041, deficit=0.3476) > Asym-FanIn(3in-2out) (σ²=0.6400, deficit=0.0000)
+    ... and 5 more
+
+--- Core stability vs σ²(edge-freq) (sorted by σ²) ---
+          σ²     deficit   in_core  topology
+      0.0000      0.0000       Yes  Path-2
+      0.0000      0.0000       Yes  Path-3
+      0.0000      0.0000       Yes  Path-4
+      0.0000      0.0000       Yes  Path-5
+      0.0000      0.0000       Yes  Parallel-2
+      0.0000      0.0000       Yes  Parallel-3
+      0.0000      0.0000       Yes  Parallel-4
+      0.0000      0.0000       Yes  SP-Balanced(2x2)
+      0.0000      0.0000       Yes  SP-Balanced(2x3)
+      0.0000      0.0000       Yes  SP-Balanced(3x2)
+      0.0000      0.0000       Yes  SP-Balanced(3x3)
+      0.0000      0.0000       Yes  SP-Balanced(2x4)
+      0.0000      0.0000       Yes  Diamond
+      0.0988      0.3048        No  Funnel(4+1)
+      0.0988      0.3302        No  Double-Bottleneck
+      0.0988      0.3048        No  FanIn(4->1)
+      0.1224      0.3048        No  Funnel(3+1)
+      0.1224      0.3048        No  FanIn(3->1)
+      0.1488      0.4760        No  Unbalanced-SP(2x3)
+      0.1600      0.2667        No  Funnel(2+1)
+      0.2041      0.3476        No  Wheatstone-Bridge
+      0.6400      0.0000       Yes  Asym-FanIn(3in-2out)
+      2.1600      0.0313        No  Ladder-2x2
+
+  Pearson correlation(σ²(edge-freq), deficit) = -0.0170
+
+--- Key findings ---
+  σ²=0 but deficit>0 (conjecture violation candidates): 0
+  σ²>0 but deficit=0 (non-convex/non-trivial but in core): 1
+    -> Asym-FanIn(3in-2out)  (σ²=0.6400)
